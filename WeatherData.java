@@ -4,6 +4,10 @@ public class WeatherData
 
 private ArrayList<Double> temperatures;
 
+WeatherData(ArrayList<Double> list)
+{
+    temperatures = list;
+}
 /**
 * Cleans the data by removing from temperatures all values that are less than
 * lower and all values that are greater than upper, as described in part (a)
@@ -25,7 +29,29 @@ public void cleanData(double lower, double upper)
 */
 
 public int longestHeatWave(double threshold)
+{
+    int longest = 0;
+    int temp = 0;
+    for (double i : temperatures)
+    {
+        if (i > threshold)
+        {
+            temp++;
+        }
+        else
+        {
+            if (longest < temp) longest = temp;
+            temp = 0;
+        }
+    }
+    return longest;
+}
 
 { /* to be implemented in part (b) */ }
 // There may be instance variables, constructors, and methods that are not shown.
+
+public String toString()
+{
+    return temperatures.toString();
+}
 }
