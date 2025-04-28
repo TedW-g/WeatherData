@@ -32,7 +32,7 @@ public int longestHeatWave(double threshold)
 {
     int longest = 0;
     int temp = 0;
-    for (double i : temperatures)
+    for (double i : temperatures)       
     {
         if (i > threshold)
         {

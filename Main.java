@@ -14,6 +14,9 @@ public class Main
         double[] nums2 = {100.5, 98.5, 102.0, 103.9, 87.5, 105.2, 90.3, 94.8, 109.1, 102.1, 107.4, 93.2};
         for (double o : nums2) arrs2.add(o);
         WeatherData temp2 = new WeatherData(arrs2);
-        System.out.println(temp2.longestHeatWave(0))
+
+        System.out.println(temp2.longestHeatWave(95.2));
+        
+        System.out.println(temp2.longestHeatWave(100.5));
     }
 }
